@@ -1,0 +1,314 @@
+////////////////////////////////////
+// PROGRAM MENGHITUNG IP SEMESTER //
+//         Ikhsanalfath			  //
+////////////////////////////////////
+
+program nilai_ip;
+uses crt;
+type grade = (A, AB, B, BC, C, D, E, null);
+
+var fisika, 
+	kalkulus, 
+	mtk_diskrit, 
+	b_inggris, 
+	algoritma, 
+	struktur_data, 
+	pti, 
+	pancasila,
+	
+	skor_fisika,
+	skor_kalkulus,
+	skor_mtk_diskrit,
+	skor_b_inggris,
+	skor_algoritma,
+	skor_struktur_data,
+	skor_pti,
+	skor_pancasila,
+
+	result_fisika,
+	result_kalkulus,
+	result_mtk_diskrit,
+	result_b_inggris,
+	result_algoritma,
+	result_struktur_data,
+	result_pti,
+	result_pancasila,
+
+	Rresult,
+	Rsks,
+	ip_mahasiswa :
+real;
+	sks_fisika,
+	sks_kalkulus,
+	sks_mtk_diskrit,
+	sks_b_inggris,
+	sks_algoritma,
+	sks_struktur_data,
+	sks_pti,
+	sks_pancasila :
+integer;
+	grade_fisika,
+	grade_kalkulus,
+	grade_mtk_diskrit,
+	grade_b_inggris,
+	grade_algoritma,
+	grade_struktur_data,
+	grade_pti,
+	grade_pancasila :
+grade;
+	
+begin
+clrscr;
+	writeln('======================================');
+	writeln('PROGRAM MENGHIUNG NILAI IP SEMESTER');
+	writeln('======================================');
+	writeln;
+
+
+	writeln('Masukan nilai Mata Pelajaran di bawah ini : ');
+	writeln('NILAI 0-100');
+	writeln('______________________________________________');
+	writeln;
+
+// ------------------------------------------------------------------------
+	sks_fisika := 3;
+	sks_kalkulus := 3;
+	sks_mtk_diskrit := 3;
+	sks_b_inggris := 2;
+	sks_algoritma := 3;
+	sks_struktur_data := 3;
+	sks_pti := 2;
+	sks_pancasila := 2;
+// ------------------------------------------------------------------------
+
+
+	write('FISIKA = ');
+	readln(fisika);
+	if (fisika > 100) then
+		begin grade_fisika:= null; end 
+	else if (fisika >= 90) AND (fisika <= 100) then 
+		begin grade_fisika:= A; skor_fisika:= 4; end
+	else if (fisika >= 80) then
+		begin grade_fisika:= AB; skor_fisika:= 3.5; end
+	else if (fisika >= 70) then 
+		begin grade_fisika:= B; skor_fisika:= 3; end
+	else if (fisika >= 60) then
+		begin grade_fisika:= BC; skor_fisika:= 2.5; end
+	else if (fisika >= 53) then
+		begin grade_fisika:=C; skor_fisika:= 2; end
+	else if (fisika >= 35) then 
+		begin grade_fisika:=D; skor_fisika:= 1; end
+	else if (fisika > 0 ) then
+		begin grade_fisika:=E; skor_fisika:= 0; end
+	else 
+		begin grade_fisika:= null end;
+
+	result_fisika:=skor_fisika*sks_fisika;
+
+// ------------------------------------------------------------------------
+
+	write('KALKULUS = ');
+	readln(kalkulus);
+	if (kalkulus > 100) then
+		begin grade_kalkulus:= null; end 
+	else if (kalkulus >= 90) AND (kalkulus <= 100) then 
+		begin grade_kalkulus:= A; skor_kalkulus:= 4; end
+	else if (kalkulus >= 80) then
+		begin grade_kalkulus:= AB; skor_kalkulus:= 3.5; end
+	else if (kalkulus >= 70) then 
+		begin grade_kalkulus:= B; skor_kalkulus:= 3; end
+	else if (kalkulus >= 60) then
+		begin grade_kalkulus:= BC; skor_kalkulus:= 2.5; end
+	else if (kalkulus >= 53) then
+		begin grade_kalkulus:=C; skor_kalkulus:= 2; end
+	else if (kalkulus >= 35) then 
+		begin grade_kalkulus:=D; skor_kalkulus:= 1; end
+	else if (kalkulus > 0 ) then
+		begin grade_kalkulus:=E; skor_kalkulus:= 0; end
+	else 
+		begin grade_kalkulus:= null end;
+
+	result_kalkulus:=skor_kalkulus*sks_kalkulus;
+
+// ------------------------------------------------------------------------
+
+	write('MATEMATIKA DISKRIT = ');
+	readln(mtk_diskrit);
+	if (mtk_diskrit > 100) then
+		begin grade_mtk_diskrit:= null; end 
+	else if (mtk_diskrit >= 90) AND (mtk_diskrit <= 100) then 
+		begin grade_mtk_diskrit:= A; skor_mtk_diskrit:= 4; end
+	else if (mtk_diskrit >= 80) then
+		begin grade_mtk_diskrit:= AB; skor_mtk_diskrit:= 3.5; end
+	else if (mtk_diskrit >= 70) then 
+		begin grade_mtk_diskrit:= B; skor_mtk_diskrit:= 3; end
+	else if (mtk_diskrit >= 60) then
+		begin grade_mtk_diskrit:= BC; skor_mtk_diskrit:= 2.5; end
+	else if (mtk_diskrit >= 53) then
+		begin grade_mtk_diskrit:=C; skor_mtk_diskrit:= 2; end
+	else if (mtk_diskrit >= 35) then 
+		begin grade_mtk_diskrit:=D; skor_mtk_diskrit:= 1; end
+	else if (mtk_diskrit > 0 ) then
+		begin grade_mtk_diskrit:=E; skor_mtk_diskrit:= 0; end
+	else 
+		begin grade_mtk_diskrit:= null end;
+
+	result_mtk_diskrit:=skor_mtk_diskrit*sks_mtk_diskrit;
+
+// ------------------------------------------------------------------------
+
+	write('BAHASA INGGRIS = ');
+	readln(b_inggris);
+	if (b_inggris > 100) then
+		begin grade_b_inggris:= null; end 
+	else if (b_inggris >= 90) AND (b_inggris <= 100) then 
+		begin grade_b_inggris:= A; skor_b_inggris:= 4; end
+	else if (b_inggris >= 80) then
+		begin grade_b_inggris:= AB; skor_b_inggris:= 3.5; end
+	else if (b_inggris >= 70) then 
+		begin grade_b_inggris:= B; skor_b_inggris:= 3; end
+	else if (b_inggris >= 60) then
+		begin grade_b_inggris:= BC; skor_b_inggris:= 2.5; end
+	else if (b_inggris >= 53) then
+		begin grade_b_inggris:=C; skor_b_inggris:= 2; end
+	else if (b_inggris >= 35) then 
+		begin grade_b_inggris:=D; skor_b_inggris:= 1; end
+	else if (b_inggris > 0 ) then
+		begin grade_b_inggris:=E; skor_b_inggris:= 0; end
+	else 
+		begin grade_b_inggris:= null end;
+
+	result_b_inggris:=skor_b_inggris*sks_b_inggris;
+
+// ------------------------------------------------------------------------
+
+	write('ALGORITMA & PEMROGRAMAN = ');
+	readln(algoritma);
+	if (algoritma > 100) then
+		begin grade_algoritma:= null; end 
+	else if (algoritma >= 90) AND (algoritma <= 100) then 
+		begin grade_algoritma:= A; skor_algoritma:= 4; end
+	else if (algoritma >= 80) then
+		begin grade_algoritma:= AB; skor_algoritma:= 3.5; end
+	else if (algoritma >= 70) then 
+		begin grade_algoritma:= B; skor_algoritma:= 3; end
+	else if (algoritma >= 60) then
+		begin grade_algoritma:= BC; skor_algoritma:= 2.5; end
+	else if (algoritma >= 53) then
+		begin grade_algoritma:=C; skor_algoritma:= 2; end
+	else if (algoritma >= 35) then 
+		begin grade_algoritma:=D; skor_algoritma:= 1; end
+	else if (algoritma > 0 ) then
+		begin grade_algoritma:=E; skor_algoritma:= 0; end
+	else 
+		begin grade_algoritma:= null end;
+
+	result_algoritma:=skor_algoritma*sks_algoritma;
+
+// ------------------------------------------------------------------------
+
+	write('STRUKTUR DATA = ');
+	readln(struktur_data);
+	if (struktur_data > 100) then
+		begin grade_struktur_data:= null; end 
+	else if (struktur_data >= 90) AND (struktur_data <= 100) then 
+		begin grade_struktur_data:= A; skor_struktur_data:= 4; end
+	else if (struktur_data >= 80) then
+		begin grade_struktur_data:= AB; skor_struktur_data:= 3.5; end
+	else if (struktur_data >= 70) then 
+		begin grade_struktur_data:= B; skor_struktur_data:= 3; end
+	else if (struktur_data >= 60) then
+		begin grade_struktur_data:= BC; skor_struktur_data:= 2.5; end
+	else if (struktur_data >= 53) then
+		begin grade_struktur_data:=C; skor_struktur_data:= 2; end
+	else if (struktur_data >= 35) then 
+		begin grade_struktur_data:=D; skor_struktur_data:= 1; end
+	else if (struktur_data > 0 ) then
+		begin grade_struktur_data:=E; skor_struktur_data:= 0; end
+	else 
+		begin grade_struktur_data:= null end;
+
+	result_struktur_data:=skor_struktur_data*sks_struktur_data;
+
+// ------------------------------------------------------------------------
+
+	write('PENGANTAR TEKNOLOGI INFORMASI = ');
+	readln(pti);
+	if (pti > 100) then
+		begin grade_pti:= null; end 
+	else if (pti >= 90) AND (pti <= 100) then 
+		begin grade_pti:= A; skor_pti:= 4; end
+	else if (pti >= 80) then
+		begin grade_pti:= AB; skor_pti:= 3.5; end
+	else if (pti >= 70) then 
+		begin grade_pti:= B; skor_pti:= 3; end
+	else if (pti >= 60) then
+		begin grade_pti:= BC; skor_pti:= 2.5; end
+	else if (pti >= 53) then
+		begin grade_pti:=C; skor_pti:= 2; end
+	else if (pti >= 35) then 
+		begin grade_pti:=D; skor_pti:= 1; end
+	else if (pti > 0 ) then
+		begin grade_pti:=E; skor_pti:= 0; end
+	else 
+		begin grade_pti:= null end;
+
+	result_pti:=skor_pti*sks_pti;
+
+// ------------------------------------------------------------------------
+
+	write('PANCASILA = ');
+	readln(pancasila);
+	if (pancasila > 100) then
+		begin grade_pancasila:= null; end 
+	else if (pancasila >= 90) AND (pancasila <= 100) then 
+		begin grade_pancasila:= A; skor_pancasila:= 4; end
+	else if (pancasila >= 80) then
+		begin grade_pancasila:= AB; skor_pancasila:= 3.5; end
+	else if (pancasila >= 70) then 
+		begin grade_pancasila:= B; skor_pancasila:= 3; end
+	else if (pancasila >= 60) then
+		begin grade_pancasila:= BC; skor_pancasila:= 2.5; end
+	else if (pancasila >= 53) then
+		begin grade_pancasila:=C; skor_pancasila:= 2; end
+	else if (pancasila >= 35) then 
+		begin grade_pancasila:=D; skor_pancasila:= 1; end
+	else if (pancasila > 0 ) then
+		begin grade_pancasila:=E; skor_pancasila:= 0; end
+	else 
+		begin grade_pancasila:= null end;
+
+	result_pancasila:=skor_pancasila*sks_pancasila;
+
+// ------------------------------------------------------------------------
+
+
+Rresult:= 	result_fisika +
+			result_kalkulus +
+			result_mtk_diskrit +
+			result_b_inggris +
+			result_algoritma +
+			result_struktur_data +
+			result_pti +
+			result_pancasila;
+
+Rsks:= 	sks_fisika +
+		sks_kalkulus +
+		sks_mtk_diskrit +
+		sks_b_inggris +
+		sks_algoritma +
+		sks_struktur_data +
+		sks_pti +
+		sks_pancasila;
+
+ip_mahasiswa:=Rresult/Rsks;
+writeln('___________________________________________');
+writeln('IP SEMESTER ANDA ', ip_mahasiswa:4:2);
+
+
+readln;
+end.
+
+////////////////////////
+// SEMOGA MEMBANTU :V //
+////////////////////////
