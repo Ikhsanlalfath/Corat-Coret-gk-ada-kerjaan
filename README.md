@@ -1,2 +1,6 @@
 # Corat-Coret-gk-ada-kerjaan
-Tanpa judul
+
+Ngapa lu baca :v
+kgk ada kerjaan lu :v
+
+Tapi bagus dah, pelajarin tuh file yg d atas :v
